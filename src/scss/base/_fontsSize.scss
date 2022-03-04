@@ -1,0 +1,128 @@
+/*
+   Fonts
+   ========================================================================== */
+$light: 300;
+$bold: 500;
+// ---
+$desktopBase: 1rem;
+$desktopScale: 1.15;
+$mobileBase: 1rem;
+$mobileScale: 1.15;
+
+$desktopSize-10: $desktopBase / $desktopScale; //13
+$desktopSize-9: $desktopBase; //16px
+$desktopSize-8: $desktopSize-9 * $desktopScale; //18.4
+$desktopSize-7: $desktopSize-8 * $desktopScale; //21.16px
+$desktopSize-6: $desktopSize-7 * $desktopScale; //21.16px * 1.15 =24.334px
+$desktopSize-5: $desktopSize-6 * $desktopScale; // 24.33416px *1.15 =28px
+$desktopSize-4: $desktopSize-5 * $desktopScale; //28px*1.15 =32px
+$desktopSize-3: $desktopSize-4 * $desktopScale; //32px*1.15 = 37px
+$desktopSize-2: $desktopSize-3 * $desktopScale; //37*1.15= 43px
+$desktopSize-1: $desktopSize-2 * $desktopScale; //18.4px = 49px
+
+$mobileSize-10: $mobileBase / $mobileScale; //13
+$mobileSize-9: $mobileBase; //16px
+$mobileSize-8: $mobileSize-9 * $mobileScale; //18.4
+$mobileSize-7: $mobileSize-8 * $mobileScale; //21.16px
+$mobileSize-6: $mobileSize-7 * $mobileScale; //21.16px * 1.15 =24.334px
+$mobileSize-5: $mobileSize-6 * $mobileScale; // 24.33416px *1.15 =28px
+$mobileSize-4: $mobileSize-5 * $mobileScale; //28px*1.15 =32px
+$mobileSize-3: $mobileSize-4 * $mobileScale; //32px*1.15 = 37px
+$mobileSize-2: $mobileSize-3 * $mobileScale; //37*1.15= 43px
+$mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
+// ---
+
+@mixin fontSize0() {
+  font-size: 48px;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 32px;
+  }
+}
+
+@mixin fontSize1() {
+  //para el h1
+  font-size: $desktopSize-1; //49 pxieles en desktop
+
+  //49
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-1;
+  }
+}
+
+@mixin fontSize2() {
+  font-size: $desktopSize-2;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-2;
+  }
+}
+
+@mixin fontSize3() {
+  font-size: $desktopSize-3;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-3;
+  }
+}
+
+@mixin fontSize4() {
+  font-size: $desktopSize-4;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-4;
+  }
+}
+
+@mixin fontSize5() {
+  font-size: $desktopSize-5;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-5;
+  }
+}
+
+@mixin fontSize6() {
+  //para el body
+  font-size: $desktopSize-6;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-6;
+  }
+}
+
+@mixin fontSize7() {
+  //para el body
+  font-size: $desktopSize-7;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-7;
+  }
+}
+
+@mixin fontSize8() {
+  //para el body
+  font-size: $desktopSize-8;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-8;
+  }
+}
+
+@mixin fontSize9() {
+  //para el body
+  font-size: $desktopSize-9;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-9;
+  }
+}
+
+@mixin fontSize10() {
+  //para el body
+  font-size: $desktopSize-10;
+
+  @media only screen and (max-width: 450px) {
+    font-size: $mobileSize-10;
+  }
+}
