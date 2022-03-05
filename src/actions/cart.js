@@ -11,7 +11,7 @@ export const updateCart = (item) => ({
 });
 
 export const removeToCart = (id) => ({
-    type: types.updateToCart,
+    type: types.removeToCart,
     payload: id,
 });
 
