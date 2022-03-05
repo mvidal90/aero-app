@@ -1,0 +1,73 @@
+
+.cards_grid {
+    column-gap: 0.75rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 0 1.25rem;
+    row-gap: 0.75rem;
+
+    .card_container {
+        background-color: $white;
+        border-radius: $border-radius;
+        height: 300px;
+        padding-bottom: 0.5rem;
+        
+        .card_img-product{
+            width: 100%;
+        }
+
+        .card_title-product{
+            font-weight: 400;
+            margin: 0;
+            text-align: center;
+            width: auto;
+        }
+
+        .card_old-price{
+            font-weight: 400;
+            margin-right: 0.5rem;
+            text-decoration:line-through;
+
+            @include fontSize8();
+        }
+
+        .card_new-price{
+            color: $primary;
+            font-weight: 400;
+    
+            @include fontSize7();
+        }
+
+        .card__buttons-container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            .card__button-add-item {
+                background-color: transparent;
+                border: 1px solid $primary;
+                border-radius: $border-radius;
+                color: $primary;
+                padding: 0.5rem 0.75rem;
+    
+                @include fontSize8();
+            }
+            .card__counter-container {
+                align-items: center;
+                color: $primary;
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                .card__buttons-counter{
+                    background-color: $primary;
+                    border: 1px solid $primary;
+                    border-radius: $border-radius;
+                    color: $white;
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}

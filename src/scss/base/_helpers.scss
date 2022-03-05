@@ -18,6 +18,10 @@
 }
   
 // Classes for flex
+.d-flex{
+    display: flex;
+}
+
 .center-box {
     align-items: center;
     justify-content: center;
