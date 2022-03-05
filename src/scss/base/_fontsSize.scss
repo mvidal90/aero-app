@@ -6,8 +6,8 @@ $bold: 500;
 // ---
 $desktopBase: 1rem;
 $desktopScale: 1.15;
-$mobileBase: 1rem;
-$mobileScale: 1.15;
+$mobileBase: .75rem;
+$mobileScale: 1.25;
 
 $desktopSize-10: $desktopBase / $desktopScale; //13
 $desktopSize-9: $desktopBase; //16px
@@ -83,7 +83,6 @@ $mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
 }
 
 @mixin fontSize6() {
-  //para el body
   font-size: $desktopSize-6;
 
   @media only screen and (max-width: 450px) {
@@ -92,7 +91,6 @@ $mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
 }
 
 @mixin fontSize7() {
-  //para el body
   font-size: $desktopSize-7;
 
   @media only screen and (max-width: 450px) {
@@ -101,7 +99,6 @@ $mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
 }
 
 @mixin fontSize8() {
-  //para el body
   font-size: $desktopSize-8;
 
   @media only screen and (max-width: 450px) {
@@ -110,7 +107,6 @@ $mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
 }
 
 @mixin fontSize9() {
-  //para el body
   font-size: $desktopSize-9;
 
   @media only screen and (max-width: 450px) {
@@ -119,7 +115,6 @@ $mobileSize-1: $mobileSize-2 * $mobileScale; //18.4px = 49px
 }
 
 @mixin fontSize10() {
-  //para el body
   font-size: $desktopSize-10;
 
   @media only screen and (max-width: 450px) {

@@ -1,7 +1,11 @@
 import React from 'react';
+import { NavBar } from './components/navbar/NavBar';
 
 export const AeroApp = () => {
     return (
-        <div>AeroApp</div>
+        <>
+            <NavBar />
+            <div>AeroApp</div>
+        </>
     )
 }
