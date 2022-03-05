@@ -1,23 +1,23 @@
 import React from 'react'
 
-export const ItemCounter = (quantity = 0) => {
+export const ItemCounter = ({ isProductInCart, increment, decrement, counter}) => {
     return (
         <div className="card__buttons-container">
             {
-                !quantity ?
-                    <button className="card__button-add-item">
-                        Agregar al carrito
-                    </button>
-                : 
+                isProductInCart ?
                     <div className="card__counter-container">
-                        <button className="card__buttons-counter">
+                        <button className="card__buttons-counter" onClick={ decrement }>
                             -
                         </button>
-                        <span>2</span>
-                        <button className="card__buttons-counter">
+                        <span>{counter}</span>
+                        <button className="card__buttons-counter"  onClick={ increment }>
                             +
                         </button>
                     </div>
+                : 
+                    <button className="card__button-add-item" onClick={ increment }>
+                        Agregar al carrito
+                    </button>
             }
         </div>
     )

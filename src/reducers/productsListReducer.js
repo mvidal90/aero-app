@@ -1,4 +1,3 @@
-import { removeDuplicates } from "../helpers/removeDuplictes";
 import { types } from "../types/types";
 
 const initialState = {
