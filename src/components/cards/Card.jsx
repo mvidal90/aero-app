@@ -1,15 +1,17 @@
 import React from 'react';
-import img from '../../assets/Bitmap@2x.png'
 import { ItemCounter } from './ItemCounter';
 
-export const Card = () => {
+export const Card = ({ photo, name, price, originalPrice }) => {
+
+  const formateddAmount = (amount) => amount.toFixed(2, 10).replace(".", ",");
+
   return (
     <div className="card_container">
-        <img src={img} alt="" className="card_img-product" />
-        <h3 className="card_title-product">Caldo Wilde</h3>
+        <img src={photo} alt="" className="card_img-product" />
+        <h3 className="card_title-product">{name}</h3>
         <div className="d-flex center-box w-100 my-2">
-            <span className="card_old-price">$ 300,00</span>
-            <span className="card_new-price">$ 300,00</span>
+            { originalPrice > price && <span className="card_old-price">$ {formateddAmount(originalPrice)}</span>}
+            <span className="card_new-price">$ {formateddAmount(price)}</span>
         </div>
         <ItemCounter />
     </div>
