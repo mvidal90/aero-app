@@ -36,7 +36,7 @@ export const Card = ({ id, photo, name, price, originalPrice }) => {
                 quantity: counter
             }));
         }
-    }, [counter])
+    }, [counter,  dispatch, id, name, originalPrice, photo, price, productInCart])
 
     return (
         <div className="card_container">

@@ -14,7 +14,7 @@ export const CardsGrid = () => {
 
     useEffect(() => {
         dispatch(getProducts(page));
-    }, [page])
+    }, [page, dispatch])
 
     const addPage = () => lastPage > page && increment();
 
@@ -30,7 +30,7 @@ export const CardsGrid = () => {
             }
             endMessage={
                 <p className="cards__grid-end-message">
-                    Lo sentimos! Estos son todos los productos...
+                    Estos son todos los productos... Por ahora ;)
                 </p>
             }
         >
