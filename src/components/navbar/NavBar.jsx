@@ -6,8 +6,10 @@ export const NavBar = () => {
     return (
         <nav>
             <div className="navbar__container">
-                <Brand />
-                <Cart />
+                <div className="navbar__wrapper">
+                    <Brand />
+                    <Cart />
+                </div>
             </div>
         </nav>
     )

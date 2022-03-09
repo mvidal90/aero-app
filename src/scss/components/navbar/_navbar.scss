@@ -3,53 +3,61 @@
     background-color: $white;
     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
     padding: 0.75rem 1.25rem;
     width: 100%;
 
-    .navbar__brand{
+    .navbar__wrapper {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        .navbar__brand-iso{
-            width: 2rem;
-            height: fit-content;
-        }
-        .navbar__brand-text1{
-            color: $brand;
-            font-size: 1.25rem;
-            font-weight: 400;
-        }
-        .navbar__brand-text2{
-            color: $brand;
-            font-size: 1.25rem;
-            font-weight: 200;
-        }
-    }
-    
-    .navbar__cart-container{
-        display: flex;
-        align-items: center;
-        .navbar__cart-total{
-            color: $primary;
-            margin-right: 0.5rem;
-        }
-        .navbar__cart-badge {
-            position: absolute;
-            right: -16px;
-            top: -16px;
-            align-items: center;
-            background-color: $primary;
-            border-radius: 100%;
-            border: 2px solid $white;
+        margin: 0 auto;
+        max-width: 1230px;
+        width: 100%;
+        .navbar__brand{
             display: flex;
-            height: 1.25rem;
-            justify-content: center;
-            width: 1.25rem;
-
-            span {
-                color: $white;
-                @include fontSize9()
+            align-items: center;
+            .navbar__brand-iso{
+                width: 2rem;
+                height: fit-content;
+            }
+            .navbar__brand-text1{
+                color: $brand;
+                font-size: 1.25rem;
+                font-weight: 400;
+            }
+            .navbar__brand-text2{
+                color: $brand;
+                font-size: 1.25rem;
+                font-weight: 200;
+            }
+        }
+        
+        .navbar__cart-container{
+            display: flex;
+            align-items: center;
+            .navbar__cart-total{
+                color: $primary;
+                margin-right: 0.5rem;
+            }
+            .navbar__cart-badge {
+                position: absolute;
+                right: -16px;
+                top: -16px;
+                align-items: center;
+                background-color: $primary;
+                border-radius: 100%;
+                border: 2px solid $white;
+                display: flex;
+                height: 1.25rem;
+                justify-content: center;
+                width: 1.25rem;
+    
+                span {
+                    color: $white;
+                    @include fontSize9()
+                }
             }
         }
     }
+
 }

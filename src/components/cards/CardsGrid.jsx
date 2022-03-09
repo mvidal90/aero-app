@@ -18,7 +18,7 @@ export const CardsGrid = () => {
     }, [page, dispatch])
 
     const addPage = () => lastPage > page && increment();
-
+    
     return (
         <>
             {errors.error && 
@@ -30,7 +30,7 @@ export const CardsGrid = () => {
                 hasMore={lastPage !== page}
                 loader={
                     <div className="w-100 d-flex center-box">
-                        <img src={loading} alt="Loading..." width="20%" />
+                        <img src={loading} alt="Loading..." className="cards__loading" />
                     </div>        
                 }
                 endMessage={
