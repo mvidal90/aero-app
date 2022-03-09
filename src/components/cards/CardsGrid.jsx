@@ -10,6 +10,7 @@ export const CardsGrid = () => {
 
     const dispatch = useDispatch();
     const { productsList, lastPage } = useSelector(state => state.list);
+    const  { errors } = useSelector( state => state );
     const { counter: page, increment } = useCounter();
 
     useEffect(() => {
@@ -19,28 +20,33 @@ export const CardsGrid = () => {
     const addPage = () => lastPage > page && increment();
 
     return (
-        <InfiniteScroll
-            dataLength={productsList.length}
-            next={addPage}
-            hasMore={lastPage !== page}
-            loader={
-                <div className="w-100 d-flex center-box">
-                    <img src={loading} alt="Loading..." width="20%" />
-                </div>        
+        <>
+            {errors.error && 
+                <p className="error__text">{errors.msg}</p>
             }
-            endMessage={
-                <p className="cards__grid-end-message">
-                    Estos son todos los productos... Por ahora ;)
-                </p>
-            }
-        >
-            <div className="cards_grid">
-                {
-                    productsList.map(
-                        prod => <Card key={prod.id} {...prod} />
-                    )
+            <InfiniteScroll
+                dataLength={productsList.length}
+                next={addPage}
+                hasMore={lastPage !== page}
+                loader={
+                    <div className="w-100 d-flex center-box">
+                        <img src={loading} alt="Loading..." width="20%" />
+                    </div>        
                 }
-            </div>
-        </InfiniteScroll>
+                endMessage={
+                    <p className="cards__grid-end-message">
+                        Estos son todos los productos... Por ahora ;)
+                    </p>
+                }
+            >
+                <div className="cards_grid">
+                    {
+                        productsList.map(
+                            prod => <Card key={prod.id} {...prod} />
+                        )
+                    }
+                </div>
+            </InfiniteScroll>
+        </>
     )
 }

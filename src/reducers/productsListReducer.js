@@ -16,6 +16,8 @@ export const productsListReducer = ( state = initialState, action) => {
                     ...action.payload.products,
                 ]
             }
+        case types.clearList:
+            return initialState
         default:
             return state;
     }

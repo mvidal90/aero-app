@@ -40,7 +40,9 @@ export const Card = ({ id, photo, name, price, originalPrice }) => {
 
     return (
         <div className="card_container">
-            <img src={photo} alt="" className="card_img-product" />
+            <div className="center-box d-flex">
+                <img src={photo} alt="" className="card_img-product" />
+            </div>
             <h3 className="card_title-product">{name}</h3>
             <div className="d-flex center-box w-100 my-2">
                     { originalPrice > price && <span className="card_old-price">$ {formateddAmount(originalPrice)}</span>}
