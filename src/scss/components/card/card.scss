@@ -25,9 +25,15 @@
         border-radius: $border-radius;
         height: 300px;
         padding-bottom: 0.5rem;
+
+        &:hover {
+            box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+        }
         
         .card_img-product{
-            height: 172px;
+            height: auto;
+            max-height: 172px;
+            max-width: 100%;
         }
 
         .card_title-product{
@@ -73,10 +79,16 @@
                 border: 1px solid $primary;
                 border-radius: $border-radius;
                 color: $primary;
-                font-weight: 200;
+                cursor: pointer;
+                font-weight: 300;
                 padding: 0.5rem 0.75rem;
-    
+                
                 @include fontSize8();
+
+                &:hover{
+                    background-color: $primary;
+                    color: $white;
+                }  
             }
             .card__counter-container {
                 align-items: center;
@@ -89,8 +101,13 @@
                     border: 1px solid $primary;
                     border-radius: $border-radius;
                     color: $white;
+                    cursor: pointer;
                     height: 2rem;
                     width: 2rem;
+                    &:hover{
+                        background-color: transparent;
+                        color: $primary;
+                    }  
                 }
             }
         }
