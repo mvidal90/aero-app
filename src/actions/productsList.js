@@ -6,7 +6,7 @@ export const getProducts = (page = 1) => {
         try {
             const resp = await fetch(`${process.env.REACT_APP_URL_API}/products/${page}`);
             const body = await resp.json();
-            console.log(body)
+            
             if (body.ok) {
                 if (page === 1) {
                     dispatch(clearList());
